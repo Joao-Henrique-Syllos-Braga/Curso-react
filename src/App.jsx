@@ -5,7 +5,12 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || [],
+    {
+      id: 1,
+      title: "Tarefa de exemplo",
+      descripition: "Esta é uma tarefa de exemplo",
+      isCompleted: false,
+    }
   );
 
   useEffect(() => {
